@@ -7,20 +7,25 @@
    
 <body>
     <script>
+        function lastWorld(item){
+            let splitItem=item.split(' ');
+            return splitItem[splitItem.length-1].length;
+        }
+        function repeatedNumber(arr){
+            for(let i=0;i<arr.length-1;i++){
+                for(let j=i+1;j<arr.length;j++){
+                    if(arr[i]==arr[j]){
+                        return arr[i];
+                    }      
+                }
+            }
+            return -1;
+        }
+        // ans 1. Find last word
+        console.log(lastWorld('Hello world'));
+        // ans2 .repeated number in an array
+        console.log(repeatedNumber([1,2,3,4,4]));
         
-  function repeatedNumber(arr){
-    for(let i=0;i<arr.length-1;i++){
-      for(let j=i+1;j<arr.length;j++){
-          if(arr[i]==arr[j]){
-            return arr[i];
-          }      
-      }
-    }
-    return -1;
-  }
-
-
-console.log(repeatedNumber([1,2,3,4,4]));
     </script>
 </body>
 </html>
